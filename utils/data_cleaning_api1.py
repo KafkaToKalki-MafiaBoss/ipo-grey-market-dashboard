@@ -74,5 +74,6 @@ def clean_data(raw:dict)->dict:
             "end_date":parse_date(raw.get("end_date")),
             "listing_date":parse_date(raw.get("listing_date")),
             "last_update":parse_date(raw.get("last_update")),
+            "scraped_at":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             }
     return normalize_record(raw)
