@@ -39,13 +39,13 @@ def clean_data(raw:dict)->dict:
         "%b %d, %Y"     ]
     
         try:
-            return datetime.fromisoformat(date_str)
+            return datetime.strftime(datetime.fromisoformat(date_str))
         except ValueError:
             pass
         
         for format in formats_to_try:
             try:
-                return datetime.strptime(date_str.strip(),format)
+                return datetime.strftime(datetime.strptime(date_str.strip(),format))
             except ValueError:
                 continue
         
