@@ -20,8 +20,10 @@ def clean_data(raw:dict)->dict:
     def parse_percentage(value: str)->float:
         if not value:
             return None
-        
-        return float(value.replace("%","").strip())
+        a=value.replace("%","").strip()
+        if a=="":
+            return None
+        return float(a)
     
     def parse_issue_price(value:str)->float:
         if not value:
@@ -39,13 +41,13 @@ def clean_data(raw:dict)->dict:
         "%b %d, %Y"     ]
     
         try:
-            return datetime.strftime(datetime.fromisoformat(date_str))
+            return datetime.fromisoformat(date_str).strftime("%Y-%m-%d %H:%M:%S")
         except ValueError:
             pass
         
         for format in formats_to_try:
             try:
-                return datetime.strftime(datetime.strptime(date_str.strip(),format))
+                return datetime.strptime(date_str.strip(),format).strftime("%Y-%m-%d %H:%M:%S")
             except ValueError:
                 continue
         
@@ -60,7 +62,6 @@ def clean_data(raw:dict)->dict:
     
     def normalize_record(raw:dict)->dict:
         return {
-            "ipo_id":raw.get("ipo_id"),
             "ipo_price":raw.get("ipo_price"),
             "gmp_price":raw.get("gmp_price"),
             "lot_size":raw.get("lot_size"),
@@ -75,5 +76,5 @@ def clean_data(raw:dict)->dict:
             "listing_date":parse_date(raw.get("listing_date")),
             "last_update":parse_date(raw.get("last_update")),
             "scraped_at":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            }
+        }
     return normalize_record(raw)

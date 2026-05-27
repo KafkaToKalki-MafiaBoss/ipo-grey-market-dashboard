@@ -1,5 +1,6 @@
 from Sources import API_1 , API_2
 from utils import data_cleaning_api1
+from database import db_setup,db_insert
 import json
 import pandas as pd
 
@@ -25,4 +26,7 @@ for data in api1.get("resultData"):
     data=data_cleaning_api1.clean_data(data)
     cleaned_list.append(data)
 
-print(json.dumps(cleaned_list,indent=4,default=str))
+# print(json.dumps(cleaned_list,indent=4,default=str))
+
+db_setup.setup()
+db_insert.data_insert(cleaned_list)
