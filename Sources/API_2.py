@@ -1,6 +1,14 @@
 import requests
+import os
+import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def invesG_API():
-    url="https://webnodejs.investorgain.com/cloud/new/report/data-read/331/1/3/2026/2025-26/0/all?search=&v=16-18"
+    try:
+        url=st.secrets["inves_api"]
+    except:
+        url=os.getenv("inves_api")
     res=requests.get(url)
     return res.json()

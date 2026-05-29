@@ -13,5 +13,3 @@ def data_insert(cleaned_data:list):
 
     conn.commit()
     conn.close()
-
-
