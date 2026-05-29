@@ -1,0 +1,11 @@
+2026-05-29 13:28:37,808 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-29 13:28:37,808 - INFO - Scheduler started
+2026-05-29 13:58:03,358 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-29 13:58:03,358 - INFO - Scheduler started
+2026-05-29 14:00:00,002 - INFO - Running job "run_pipeline (trigger: cron[month='*', day='*', day_of_week='*', hour='10-17/2,19', minute='0'], next run at: 2026-05-29 14:00:00 IST)" (scheduled at 2026-05-29 14:00:00+05:30)
+2026-05-29 14:00:00,003 - INFO - Pipeline Started
+2026-05-29 14:00:01,037 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-29 14:00:01,052 - INFO - Successfully added 73 rows in the table
+          from 74 entries provided
+2026-05-29 14:00:01,067 - INFO - Job "run_pipeline (trigger: cron[month='*', day='*', day_of_week='*', hour='10-17/2,19', minute='0'], next run at: 2026-05-29 16:00:00 IST)" executed successfully

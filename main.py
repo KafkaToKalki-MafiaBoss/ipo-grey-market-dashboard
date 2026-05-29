@@ -1,32 +1,21 @@
-from Sources import API_1 , API_2
-from utils import data_cleaning_api1
-from database import db_setup,db_insert
-import json
-import pandas as pd
+from zoneinfo import ZoneInfo
+from apscheduler.schedulers.blocking import BlockingScheduler
+from apscheduler.triggers.cron import CronTrigger
+import pipeline
+import logging
 
+ist=ZoneInfo("Asia/Kolkata")
 
-api1=API_1.nif_API()
-api2=API_2.invesG_API()
+scheduler=BlockingScheduler(timezone=ist)
 
-# print(api2)
-# print(api1)
+trigger=CronTrigger.from_crontab("0 10-17/2,19 * * *")
 
-cleaned_list=[]
+scheduler.add_job(pipeline.run_pipeline,trigger=trigger)
 
+logging.basicConfig(
+    filename="logs/pipeline.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
-# print(json.dumps(api1, indent=4))
-
-# print(data_cleaning_api1.clean_data(api1))
-
-## fail safe to check if api call returns proper output
-while api1.get("result")==0:
-    api1=API_1.nif_API()
-
-for data in api1.get("resultData"):
-    data=data_cleaning_api1.clean_data(data)
-    cleaned_list.append(data)
-
-# print(json.dumps(cleaned_list,indent=4,default=str))
-
-db_setup.setup()
-db_insert.data_insert(cleaned_list)
+scheduler.start()
