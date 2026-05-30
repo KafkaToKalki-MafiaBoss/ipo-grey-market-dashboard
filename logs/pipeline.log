@@ -9,3 +9,78 @@
 2026-05-29 14:00:01,052 - INFO - Successfully added 73 rows in the table
           from 74 entries provided
 2026-05-29 14:00:01,067 - INFO - Job "run_pipeline (trigger: cron[month='*', day='*', day_of_week='*', hour='10-17/2,19', minute='0'], next run at: 2026-05-29 16:00:00 IST)" executed successfully
+2026-05-30 12:51:40,559 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 12:51:40,560 - INFO - Scheduler started
+2026-05-30 12:51:40,560 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 12:51:40 IST], next run at: 2026-05-30 12:51:40 IST)" (scheduled at 2026-05-30 12:51:40.558924+05:30)
+2026-05-30 12:51:40,561 - INFO - Removed job dbe461d69a2f447e8bf2773b72abaffd
+2026-05-30 12:51:40,561 - INFO - Pipeline Started
+2026-05-30 12:51:41,659 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 12:51:41,729 - ERROR - Exception occured connection to server at "db.igwtcchjchkritxbzsuj.supabase.co" (2406:da1c:4c7:f801:3766:e89d:8d23:75cd), port 5432 failed: Network is unreachable
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-30 12:51:41,729 - INFO - Job "run_pipeline (trigger: date[2026-05-30 12:51:40 IST], next run at: 2026-05-30 12:51:40 IST)" executed successfully
+2026-05-30 12:53:36,097 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 12:53:36,099 - INFO - Scheduler started
+2026-05-30 12:53:36,099 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 12:53:36 IST], next run at: 2026-05-30 12:53:36 IST)" (scheduled at 2026-05-30 12:53:36.096597+05:30)
+2026-05-30 12:53:36,100 - INFO - Removed job 296f365ee1984419b58f5074a92a80dd
+2026-05-30 12:53:36,100 - INFO - Pipeline Started
+2026-05-30 12:53:36,589 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 12:53:36,636 - ERROR - Exception occured connection to server at "db.igwtcchjchkritxbzsuj.supabase.co" (2406:da1c:4c7:f801:3766:e89d:8d23:75cd), port 5432 failed: Network is unreachable
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-30 12:53:36,636 - INFO - Job "run_pipeline (trigger: date[2026-05-30 12:53:36 IST], next run at: 2026-05-30 12:53:36 IST)" executed successfully
+2026-05-30 12:59:55,859 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 12:59:55,859 - INFO - Scheduler started
+2026-05-30 12:59:55,859 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 12:59:55 IST], next run at: 2026-05-30 12:59:55 IST)" (scheduled at 2026-05-30 12:59:55.858425+05:30)
+2026-05-30 12:59:55,860 - INFO - Removed job 355f0cc3f31a4e179e28b30ae81aaf0c
+2026-05-30 12:59:55,860 - INFO - Pipeline Started
+2026-05-30 12:59:56,668 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 12:59:56,724 - ERROR - Exception occured connection to server at "db.igwtcchjchkritxbzsuj.supabase.co" (2406:da1c:4c7:f801:3766:e89d:8d23:75cd), port 5432 failed: Network is unreachable
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-30 12:59:56,724 - INFO - Job "run_pipeline (trigger: date[2026-05-30 12:59:55 IST], next run at: 2026-05-30 12:59:55 IST)" executed successfully
+2026-05-30 13:06:45,658 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 13:06:45,658 - INFO - Scheduler started
+2026-05-30 13:06:45,658 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 13:06:45 IST], next run at: 2026-05-30 13:06:45 IST)" (scheduled at 2026-05-30 13:06:45.657566+05:30)
+2026-05-30 13:06:45,659 - INFO - Removed job 503b8a43bee54db68738ebfbe7ba363e
+2026-05-30 13:06:45,659 - INFO - Pipeline Started
+2026-05-30 13:06:47,500 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 13:06:47,559 - ERROR - Exception occured connection to server at "db.igwtcchjchkritxbzsuj.supabase.co" (2406:da1c:4c7:f801:3766:e89d:8d23:75cd), port 6543 failed: Network is unreachable
+	Is the server running on that host and accepting TCP/IP connections?
+
+2026-05-30 13:06:47,559 - INFO - Job "run_pipeline (trigger: date[2026-05-30 13:06:45 IST], next run at: 2026-05-30 13:06:45 IST)" executed successfully
+2026-05-30 13:09:50,875 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 13:09:50,875 - INFO - Scheduler started
+2026-05-30 13:09:50,876 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 13:09:50 IST], next run at: 2026-05-30 13:09:50 IST)" (scheduled at 2026-05-30 13:09:50.875106+05:30)
+2026-05-30 13:09:50,876 - INFO - Removed job 46f6b7f7fb9a4dce8f28422082bbd4cf
+2026-05-30 13:09:50,877 - INFO - Pipeline Started
+2026-05-30 13:09:51,305 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 13:09:52,692 - ERROR - Exception occured connection to server at "aws-1-ap-southeast-2.pooler.supabase.com" (52.65.247.42), port 6543 failed: FATAL:  (EADDRNOTALLOWED) address not in tenant allow_list: {223, 184, 157, 216}
+connection to server at "aws-1-ap-southeast-2.pooler.supabase.com" (52.65.247.42), port 6543 failed: FATAL:  (EADDRNOTALLOWED) address not in tenant allow_list: {223, 184, 157, 216}
+
+2026-05-30 13:09:52,692 - INFO - Job "run_pipeline (trigger: date[2026-05-30 13:09:50 IST], next run at: 2026-05-30 13:09:50 IST)" executed successfully
+2026-05-30 13:26:51,103 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 13:26:51,112 - INFO - Scheduler started
+2026-05-30 13:26:51,119 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 13:26:51 IST], next run at: 2026-05-30 13:26:51 IST)" (scheduled at 2026-05-30 13:26:51.090640+05:30)
+2026-05-30 13:26:51,122 - INFO - Removed job 74cb30eb6b15406fb22c7a0c2c7650b8
+2026-05-30 13:26:51,124 - INFO - Pipeline Started
+2026-05-30 13:26:54,258 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 13:27:44,691 - INFO - Successfully added 72 rows in the table
+          from 73 entries provided
+2026-05-30 13:27:44,912 - INFO - Job "run_pipeline (trigger: date[2026-05-30 13:26:51 IST], next run at: 2026-05-30 13:26:51 IST)" executed successfully
+2026-05-30 16:02:44,889 - INFO - Added job "run_pipeline" to job store "default"
+2026-05-30 16:02:44,889 - INFO - Scheduler started
+2026-05-30 16:02:44,889 - INFO - Running job "run_pipeline (trigger: date[2026-05-30 16:02:44 IST], next run at: 2026-05-30 16:02:44 IST)" (scheduled at 2026-05-30 16:02:44.887765+05:30)
+2026-05-30 16:02:44,890 - INFO - Removed job 2bf3a747b50045d6abd882b800e8ac58
+2026-05-30 16:02:44,890 - INFO - Pipeline Started
+2026-05-30 16:02:46,700 - INFO - API Call Successful.
+                        Initiating Data Preprocessing
+2026-05-30 16:03:14,902 - INFO - Successfully added 72 rows in the table
+          from 73 entries provided
+2026-05-30 16:03:15,212 - INFO - Job "run_pipeline (trigger: date[2026-05-30 16:02:44 IST], next run at: 2026-05-30 16:02:44 IST)" executed successfully

@@ -8,9 +8,10 @@ ist=ZoneInfo("Asia/Kolkata")
 
 scheduler=BlockingScheduler(timezone=ist)
 
-trigger=CronTrigger.from_crontab("0 10-17/2,19 * * *")
+# trigger=CronTrigger.from_crontab("0 10-17/2,19 * * *")
 
-scheduler.add_job(pipeline.run_pipeline,trigger=trigger)
+# scheduler.add_job(pipeline.run_pipeline,trigger=trigger)
+scheduler.add_job(pipeline.run_pipeline)
 
 logging.basicConfig(
     filename="logs/pipeline.log",
