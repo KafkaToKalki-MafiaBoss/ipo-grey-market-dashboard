@@ -1,16 +1,12 @@
 import psycopg2
 import logging
 import os
-import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
 
 def data_insert(cleaned_data:list):
-    try:
-        db_url=st.secrets["db_url"]
-    except:
-        db_url=os.getenv("db_url")
+    db_url=os.getenv("db_url")
     conn=psycopg2.connect(db_url)
     c=conn.cursor()
     c.executemany("""
