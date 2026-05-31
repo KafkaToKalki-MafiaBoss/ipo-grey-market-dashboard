@@ -1,0 +1,29 @@
+name: IPO GMP Data Pipeline
+
+on:
+  schedule:
+    - cron: "30 4,6,8,10,13 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          db_url: ${{ secrets.db_url }}
+          nif_api: ${{ secrets.nif_api }}
+          inves_api: ${{ secrets.inves_api }}
+        run: python -c "import pipeline; pipeline.run_pipeline()"
