@@ -29,4 +29,4 @@ jobs:
           db_url: ${{ secrets.db_url }}
           nif_api: ${{ secrets.nif_api }}
           inves_api: ${{ secrets.inves_api }}
-        run: python -c "import pipeline; pipeline.run_pipeline()"
+        run: python main.py
