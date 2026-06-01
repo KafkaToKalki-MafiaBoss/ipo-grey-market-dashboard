@@ -3,6 +3,7 @@ from utils import data_cleaning_api1
 from database import db_setup,db_insert
 import json
 import logging
+import traceback
 
 def run_pipeline():
     try:
@@ -34,4 +35,5 @@ def run_pipeline():
         db_insert.data_insert(cleaned_list)
     
     except Exception as e:
-        logging.error(f"Exception occured {e}")
+        print(f"ERROR: {e}")
+        traceback.print_exc()
