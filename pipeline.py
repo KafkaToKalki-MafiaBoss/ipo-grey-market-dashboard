@@ -6,6 +6,7 @@ import logging
 
 def run_pipeline():
     try:
+        print("RUN_PIPELINE CALLED")
         logging.info("Pipeline Started")
         api1=API_1.nif_API()
         api2=API_2.invesG_API()
