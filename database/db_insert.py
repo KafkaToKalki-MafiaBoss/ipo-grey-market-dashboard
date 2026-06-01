@@ -24,7 +24,7 @@ def data_insert(cleaned_data:list):
     )
     ON CONFLICT (company_name, ipo_type, scraped_at) DO NOTHING;""", cleaned_data)
 
-    
+    print(f"rowcount: {c.rowcount}")
     logging.info(f"""Successfully added {c.rowcount} rows in the table
           from {len(cleaned_data)} entries provided""")
 

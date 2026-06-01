@@ -9,6 +9,8 @@ def run_pipeline():
         print("RUN_PIPELINE CALLED")
         logging.info("Pipeline Started")
         api1=API_1.nif_API()
+        print(f"API1 result: {api1.get('result')}")
+        print(f"resultData length: {len(api1.get('resultData', []))}")
         api2=API_2.invesG_API()
 
         cleaned_list=[]
@@ -25,9 +27,10 @@ def run_pipeline():
         for data in api1.get("resultData"):
             data=data_cleaning_api1.clean_data(data)
             cleaned_list.append(data)
-
+        print(f"cleaned_list length: {len(cleaned_list)}")
 
         db_setup.setup()
+        print("ATTEMPTING DB INSERT")
         db_insert.data_insert(cleaned_list)
     
     except Exception as e:
